@@ -49,3 +49,5 @@ class Solution(object):
         binary_digits.append(num % 2)
 
         return binary_digits
+
+# using lists
