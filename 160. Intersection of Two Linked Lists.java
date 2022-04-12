@@ -10,6 +10,7 @@
  * }
  */
 import java.util.*;
+
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         // cursors
