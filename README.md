@@ -1,5 +1,5 @@
 # LeetCode
 
-Learning data structure and algorithms.
+Learning data structures and algorithms.
 
 As well as Java!
