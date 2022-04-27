@@ -14,9 +14,17 @@ class Solution {
         if (l1 == null && l2 == null) {
             return null;
         } else if (l1 == null) {
-            l1 = new ListNode(0);
+            if (l2.val == 10) {
+                l1 = new ListNode(0);
+            } else {
+                return l2;
+            }
         } else if (l2 == null) {
-            l2 = new ListNode(0);
+            if (l1.val == 10) {
+                l2 = new ListNode(0);                
+            } else {
+                return l1;
+            }
         }
         
         // l1 and l2 are not null
