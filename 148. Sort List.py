@@ -12,17 +12,7 @@ class Solution(object):
         :rtype: ListNode
         """
         
-        # def toString(head):
-        #     res = "[ "
-        #     while head:
-        #         res += str(head.val)
-        #         res += " "
-        #         head = head.next
-        #     res += "]"
-        #     return res     
-        
         # base case: no node or 1 node
-        # print("head:", toString(head))
         if not head or not head.next:
             return head
         
@@ -49,13 +39,9 @@ class Solution(object):
         Q1 = Q1.next 
         Q2 = Q2.next 
         
-        # print("Q1:", toString(Q1))
-        # print("Q2:", toString(Q2))
         # sort 2 queues separately
         Q1_sorted = self.sortList(Q1)
         Q2_sorted = self.sortList(Q2)
-        # print("Q1_sorted:", toString(Q1_sorted))
-        # print("Q2_sorted:", toString(Q2_sorted))
         
         # merge Q1 and Q2
         new_head = ListNode(-1)
@@ -71,15 +57,12 @@ class Solution(object):
                 Q2_sorted = Q2_sorted.next 
                 node = node.next 
                 
-        
-        # print("new_head after initial merge:", toString(new_head)        )
         # check for remaining Q1/Q2
         if Q1_sorted:
             node.next = Q1_sorted
         if Q2_sorted:
             node.next = Q2_sorted
         
-        # print("new_head after all merge:", toString(new_head))
         return new_head.next
             
             
